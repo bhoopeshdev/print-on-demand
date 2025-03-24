@@ -237,7 +237,7 @@ export default function FeaturedProducts() {
         <div className="flex-1">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredProducts.map((product) => (
-              <Card key={product.id} className="group overflow-hidden">
+              <Card key={product.id} className="group overflow-hidden py-0 gap-0">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -254,7 +254,7 @@ export default function FeaturedProducts() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="p-4">
+                <CardContent className="p-2">
                   <div className="mb-1 text-sm text-gray-500">{product.category}</div>
                   <h3 className="mb-2 font-semibold">{product.name}</h3>
                   <p className="text-lg font-bold text-primary">${product.price.toFixed(2)}</p>
